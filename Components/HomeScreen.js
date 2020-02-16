@@ -23,9 +23,18 @@ class HomeScreen extends Component {
         <Button
           large
           block={true}
+          style={{ backgroundColor: "#ffde00" }}
           onPress={() => this.props.navigation.navigate("SearchTabNavigator")}
         >
-          <Text style={{ color: "white" }}>Search Beer</Text>
+          <Text
+            style={{
+              color: "black",
+              fontWeight: "bold",
+              fontSize: 20
+            }}
+          >
+            Search Beer
+          </Text>
         </Button>
       </View>
     );

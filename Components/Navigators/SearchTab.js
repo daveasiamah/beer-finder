@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import AboutScreen from "../AboutScreen";
+import SearchBody from "../SearchBody";
 
 const Drawer = createDrawerNavigator();
 
@@ -9,13 +9,13 @@ class SearchTab extends Component {
   render() {
     return (
       <Drawer.Navigator
-        initialRouteName="About"
+        initialRouteName="Search"
         drawerContentOptions={{
           activeTintColor: "white",
           activeBackgroundColor: "black"
         }}
       >
-        <Drawer.Screen name="About" component={AboutScreen} />
+        <Drawer.Screen name="Search" component={SearchBody} />
       </Drawer.Navigator>
     );
   }
