@@ -41,7 +41,7 @@ class LoginScreen extends Component {
 
   //Signin user
   onSignIn = googleUser => {
-    console.log("Signing in as: ", googleUser.email);
+    console.log("Signing in as: " + googleUser);
     this.props.navigation.navigate("Home", { user: googleUser });
     // We need to register an Observer on Firebase Auth to make sure auth is initialized.
     var unsubscribe = firebase.auth().onAuthStateChanged(firebaseUser => {
@@ -79,7 +79,7 @@ class LoginScreen extends Component {
                     if (error) {
                       console.log(error);
                     } else {
-                      console.log("Data was saved successfully.");
+                      console.log("Data was not saved.");
                     }
                   }
                 )

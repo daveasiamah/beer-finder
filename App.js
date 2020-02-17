@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, Image } from "react-native";
+import { StyleSheet, Image, InteractionManager, Platform } from "react-native";
 
 import * as firebase from "firebase";
 import { firebaseConfig } from "./config";
@@ -11,6 +11,7 @@ import HomeScreen from "./Components/HomeScreen";
 import LoginScreen from "./Components/LoginScreen";
 import LoadingScreen from "./Components/LoadingScreen";
 import SearchTabNavigator from "./Components/Navigators/SearchTabNavigator";
+import SearchHeader from "./Components/Navigators/SearchHeader";
 
 const Stack = createStackNavigator();
 
@@ -35,6 +36,7 @@ class App extends Component {
             name="SearchTabNavigator"
             component={SearchTabNavigator}
           />
+          {/* <Stack.Screen name="SearchHeader" component={SearchHeader} /> */}
         </Stack.Navigator>
       </NavigationContainer>
     );

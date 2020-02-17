@@ -6,6 +6,9 @@ import { Button } from "native-base";
 import bg from "../assets/beer-bg1.jpg";
 
 class HomeScreen extends Component {
+  componentDidMount() {
+    console.log(this.props.user);
+  }
   render() {
     return (
       <View style={Styles.homeScreenView}>

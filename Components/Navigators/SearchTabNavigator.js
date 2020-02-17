@@ -42,7 +42,6 @@ class SearchTabNavigator extends Component {
             }
             // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
-            // return <MyTabBar />;
           },
           lazy
         })}
